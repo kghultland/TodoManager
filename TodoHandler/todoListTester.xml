@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_131" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>sov middag</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1498734000000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Item3</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>rasta hunden</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1498560103549</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Item2</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
