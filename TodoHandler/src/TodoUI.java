@@ -30,7 +30,7 @@ public class TodoUI {
         contentPane = frame.getContentPane();
         SpringLayout layout = new SpringLayout();
         contentPane.setLayout(layout);
-        
+       
         
         // Initialise the JList and add it to the ContentPane
         DefaultListModel<TodoItem> listModel = new DefaultListModel<TodoItem>();

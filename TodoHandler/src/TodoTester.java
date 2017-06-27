@@ -17,6 +17,7 @@ public class TodoTester {
 		
 		tIL = new TodoItemList();
 		tIL.initializeFromXML("todoList.xml");
+		tIL.sortList();
 		
 		tUI = new TodoUI(tIL);
 		
@@ -31,7 +32,7 @@ public class TodoTester {
 //		tIL.print();
 		
 //		System.out.println("\nCreating Item1");
-//		TodoItem item1= new TodoItem("Item1", "Städa rummet", "SFTB (skit från tangentbordet)");
+//		TodoItem item1= new TodoItem("Item1", "Städa rummet", "2017-07-02 14:45");
 //		item1.print();
 //		
 //		System.out.println("\nCreating Item2");
@@ -105,7 +106,7 @@ public class TodoTester {
 //		System.out.println("\nList contains");
 //		tIL.print();
 //	
-//		tIL.serializeToXML("todoListTester.xml");
+//		tIL.serializeToXML("todoList.xml");
 		
 		
 	}

@@ -31,5 +31,35 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>Städa rummet</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1498999500000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Item1</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>klipp gräset</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1498402800000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Item4</string>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

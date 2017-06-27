@@ -4,6 +4,21 @@
   <void method="add">
    <object class="TodoItem">
     <void property="body">
+     <string>rasta hunden</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1498554552409</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Item2</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
      <string>sov middag</string>
     </void>
     <void property="dueDateTime">
@@ -19,15 +34,30 @@
   <void method="add">
    <object class="TodoItem">
     <void property="body">
-     <string>rasta hunden</string>
+     <string>Städa rummet</string>
     </void>
     <void property="dueDateTime">
      <object class="java.util.Date">
-      <long>1498560103549</long>
+      <long>1498568705109</long>
      </object>
     </void>
     <void property="title">
-     <string>Item2</string>
+     <string>Item1</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>klipp gräset</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1498402800000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Item4</string>
     </void>
    </object>
   </void>
