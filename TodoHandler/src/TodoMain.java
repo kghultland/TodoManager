@@ -1,13 +1,13 @@
 
-import java.util.Date; 
 
-public class TodoTester {
+
+public class TodoMain {
 	private static TodoItemList tIL;
 	private static TodoUI tUI;
 		
 	
 
-	public TodoTester() {
+	public TodoMain() {
 		super();
 		
 	}
@@ -20,7 +20,9 @@ public class TodoTester {
 		tIL.sortList();
 		
 		tUI = new TodoUI(tIL);
-		
+	}
+
+}		
 		
 		
 		
@@ -109,6 +111,4 @@ public class TodoTester {
 //		tIL.serializeToXML("todoList.xml");
 		
 		
-	}
 
-}

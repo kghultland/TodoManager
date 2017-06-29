@@ -4,51 +4,6 @@
   <void method="add">
    <object class="TodoItem">
     <void property="body">
-     <string>rasta hunden</string>
-    </void>
-    <void property="dueDateTime">
-     <object class="java.util.Date">
-      <long>1498554552409</long>
-     </object>
-    </void>
-    <void property="title">
-     <string>Item2</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="TodoItem">
-    <void property="body">
-     <string>sov middag</string>
-    </void>
-    <void property="dueDateTime">
-     <object class="java.util.Date">
-      <long>1498734000000</long>
-     </object>
-    </void>
-    <void property="title">
-     <string>Item3</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="TodoItem">
-    <void property="body">
-     <string>Städa rummet</string>
-    </void>
-    <void property="dueDateTime">
-     <object class="java.util.Date">
-      <long>1498999500000</long>
-     </object>
-    </void>
-    <void property="title">
-     <string>Item1</string>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="TodoItem">
-    <void property="body">
      <string>klipp gräset</string>
     </void>
     <void property="dueDateTime">
@@ -57,7 +12,112 @@
      </object>
     </void>
     <void property="title">
-     <string>Item4</string>
+     <string>Trädgården</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>wrtwreter</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1498658580000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>terwtwe</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>sov middag intensivt</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1498734000000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Diverse</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>Diska hunden.  Använd mycket såpa</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1498906800000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Djurhantering</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>Städa rummet - viktigt</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1498999500000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Huset</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>rensa potatislandet</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1500058800000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Trädgården</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>rasta katten</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1500887340000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Djurhantering</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>Rensa ogräs</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1501603200000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Trädgården</string>
     </void>
    </object>
   </void>

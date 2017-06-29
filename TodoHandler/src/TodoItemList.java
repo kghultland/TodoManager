@@ -1,12 +1,14 @@
-import java.beans.XMLDecoder; 
+import java.beans.XMLDecoder; // load or save to XML
 import java.beans.XMLEncoder;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+
 import java.util.ArrayList;
-import java.util.Collections;
+
+import java.util.Collections;  // sortering
 import java.util.Comparator;
 
 public class TodoItemList {

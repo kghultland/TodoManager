@@ -65,6 +65,11 @@ public class TodoItem {
 	public Date getDueDateTime() {
 		return dueDateTime;
 	}
+	
+	public String getDueDateTimeAsString() {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		return df.format(dueDateTime);		
+	}
 
 	public void setDueDateTime(Date dueDateTime) {
 		this.dueDateTime = dueDateTime;
@@ -85,7 +90,12 @@ public class TodoItem {
 	public String toString() {
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		
-		return ((done)?"Klart    ":"Ej Klart ") +  df.format(dueDateTime) +" "+title+" : "+body;
+		return ((done)?"[X] ":"[ ] ") +  df.format(dueDateTime) +" ["+title+"]  "+body;
+	}
+
+	public void setToggle() {
+		this.done = !this.done;
+		
 	}
 	
 
