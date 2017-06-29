@@ -3,6 +3,8 @@
 
 public class TodoMain {
 	private static TodoItemList tIL;
+	
+	@SuppressWarnings("unused")
 	private static TodoUI tUI;
 		
 	
@@ -20,12 +22,12 @@ public class TodoMain {
 		tIL.sortList();
 		
 		tUI = new TodoUI(tIL);
+		
 	}
 
 }		
-		
-		
-		
+				
+
 		
 //		System.out.println("\nReading from XML");
 //		tIL.initializeFromXML("todoListTester.xml");

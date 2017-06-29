@@ -65,7 +65,8 @@ public class TodoItemList {
 		XMLEncoder encoder=null;
 		try{
 		encoder=new XMLEncoder(new BufferedOutputStream(new FileOutputStream(fileName)));
-		}catch(FileNotFoundException fileNotFound){
+		}
+		catch(FileNotFoundException fileNotFound){
 			System.out.println("ERROR: While Creating or Opening the File "+fileName);
 		}
 				
@@ -80,7 +81,8 @@ public class TodoItemList {
 		XMLDecoder decoder=null;
 		try {
 			decoder=new XMLDecoder(new BufferedInputStream(new FileInputStream(fileName)));
-		} catch (FileNotFoundException e) {
+		} 
+		catch (FileNotFoundException e) {
 			System.out.println("ERROR: File "+fileName+" not found");
 		}
 		todoList=(ArrayList<TodoItem>)decoder.readObject();

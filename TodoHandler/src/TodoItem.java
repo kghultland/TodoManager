@@ -90,7 +90,8 @@ public class TodoItem {
 	public String toString() {
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		
-		return ((done)?"[X] ":"[ ] ") +  df.format(dueDateTime) +" ["+title+"]  "+body;
+//		return ((done)?"[X] ":"[ ] ") +  df.format(dueDateTime) +" ["+title+"] "+body;
+		return ((done)?"\u2612 ":"\u2610 ") +  df.format(dueDateTime) +" ["+title+"] "+body;
 	}
 
 	public void setToggle() {

@@ -1,5 +1,8 @@
+import java.awt.Color;
+import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,6 +18,7 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import javax.swing.ListCellRenderer;
 import javax.swing.ListSelectionModel;
 import javax.swing.Spring;
 import javax.swing.SpringLayout;
@@ -48,7 +52,7 @@ public class TodoUI {
 	private static DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 	private static JFormattedTextField date = new JFormattedTextField(format);
 	
-	private static JTextField search = new JTextField();
+	//private static JTextField search = new JTextField();
 
 	private final static JComponent[] inputs = new JComponent[] { new JLabel("Uppgift"), title, new JLabel("Information"), body,
 			new JLabel("Tidpunkt"), date };
@@ -89,6 +93,9 @@ public class TodoUI {
 		listbox.setLayoutOrientation(JList.VERTICAL);
 		listbox.setVisibleRowCount(-1);
 		listbox.addMouseListener(new MyMouseListener());
+		
+		
+		listbox.setCellRenderer(new TodoItemRenderer());
 
 		JScrollPane listScroller = new JScrollPane(listbox);
 		listScroller.setPreferredSize(new Dimension(650, 550));
@@ -209,25 +216,21 @@ public class TodoUI {
 		
 		@Override
 		public void windowOpened(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
+	
 		}
 		
 		@Override
 		public void windowIconified(WindowEvent e) {
-			// TODO Auto-generated method stub
 			
 		}
 		
 		@Override
 		public void windowDeiconified(WindowEvent e) {
-			// TODO Auto-generated method stub
 			
 		}
 		
 		@Override
 		public void windowDeactivated(WindowEvent e) {
-			// TODO Auto-generated method stub
 			
 		}
 		
@@ -238,13 +241,11 @@ public class TodoUI {
 		
 		@Override
 		public void windowClosed(WindowEvent e) {
-			// TODO Auto-generated method stub
 			
 		}
 		
 		@Override
 		public void windowActivated(WindowEvent e) {
-			// TODO Auto-generated method stub
 			
 		}
 	}
@@ -252,31 +253,27 @@ public class TodoUI {
 	static class MyMouseListener implements MouseListener {
 		@Override
 		public void mouseReleased(MouseEvent e) {
-			// TODO Auto-generated method stub
 			
 		}
 		
 		@Override
 		public void mousePressed(MouseEvent e) {
-			// TODO Auto-generated method stub
-			
+		
 		}
 		
 		@Override
 		public void mouseExited(MouseEvent e) {
-			// TODO Auto-generated method stub
 			
 		}
 		
 		@Override
 		public void mouseEntered(MouseEvent e) {
-			// TODO Auto-generated method stub
 			
 		}
 		
 		@Override
 		public void mouseClicked(MouseEvent e) {
-			// TODO Auto-generated method stub
+
 			int clickCount = e.getClickCount();
 			
 			if (clickCount==2) {	
@@ -370,6 +367,48 @@ public class TodoUI {
 			listModel.addElement(todo);
 		}
 	}
+	
+	//@SuppressWarnings("serial")
+	public class TodoItemRenderer extends JLabel implements ListCellRenderer<TodoItem> {
+
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public TodoItemRenderer() {
+			setOpaque(true);
+		}
+
+		
+		// listbox.setFont(new Font("monospaced",Font.BOLD,14));
+		@Override
+		public Component getListCellRendererComponent(JList<? extends TodoItem> list, TodoItem value, int index,
+				boolean isSelected, boolean cellHasFocus) {
+
+			Date now = new Date();
+			Date event = value.getDueDateTime();
+
+			setFont(new Font("monospaced",Font.BOLD,15));
+			setText(value.toString());
+
+			if (now.compareTo(event) > 0) {
+				setForeground(Color.RED);
+			} else {
+				setForeground(list.getForeground());
+			}
+
+			if (isSelected) {
+				setBackground(list.getSelectionBackground());
+				// setForeground(list.getSelectionForeground());
+			} else {
+				setBackground(list.getBackground());
+				// setForeground(list.getForeground());
+			}
+
+			return this;
+		}
+	} 
 	
 	private static void doEdit() {
 		Date enteredDate;
@@ -499,17 +538,14 @@ public class TodoUI {
 			}
 		}
 	}
-	
-	
+		
 	private static void doNext() {
 		String line;
 		int startLine=0;
-
 		
 		if (!listbox.isSelectionEmpty()) {
 			startLine=listbox.getSelectedIndex()+1;
-		}
-		
+		}		
 		for (int i=startLine; i<listbox.getModel().getSize(); i++) {
 			line = listbox.getModel().getElementAt(i).toString().toLowerCase();
 			if (line.contains(searchText)) {
