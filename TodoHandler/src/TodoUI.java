@@ -453,7 +453,7 @@ public class TodoUI {
 	}
 	
 	private static void doSave() {
-		tIL.serializeToXML("todoList.xml");
+		tIL.serializeToXML(TodoMain.FILENAME);
 	}
 	
 	private static void doAdd() {
@@ -482,7 +482,7 @@ public class TodoUI {
 	}
 	
 	private static void doLoad() {
-		tIL.initializeFromXML("todoList.xml");
+		tIL.initializeFromXML(TodoMain.FILENAME);
 		updateList();
 	}
 	

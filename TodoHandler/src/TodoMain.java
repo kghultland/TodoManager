@@ -1,34 +1,30 @@
 
-
-
 public class TodoMain {
 	private static TodoItemList tIL;
-	
+	public static final String FILENAME="todoList.xml";
+		
 	@SuppressWarnings("unused")
 	private static TodoUI tUI;
 		
 	
 
 	public TodoMain() {
-		super();
-		
+		super();	
 	}
 
 
 	public static void main(String[] args) {
 		
 		tIL = new TodoItemList();
-		tIL.initializeFromXML("todoList.xml");
-		tIL.sortList();
+		tIL.initializeFromXML(FILENAME);
+		//tIL.sortList();
 		
 		tUI = new TodoUI(tIL);
 		
 	}
 
 }		
-				
-
-		
+						
 //		System.out.println("\nReading from XML");
 //		tIL.initializeFromXML("todoListTester.xml");
 //		
