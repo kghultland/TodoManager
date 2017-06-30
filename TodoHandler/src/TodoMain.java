@@ -1,4 +1,3 @@
-
 public class TodoMain {
 	private static TodoItemList tIL;
 	public static final String FILENAME="todoList.xml";
@@ -6,23 +5,17 @@ public class TodoMain {
 	@SuppressWarnings("unused")
 	private static TodoUI tUI;
 		
-	
-
 	public TodoMain() {
 		super();	
 	}
 
 
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {	
 		tIL = new TodoItemList();
 		tIL.initializeFromXML(FILENAME);
-		//tIL.sortList();
 		
-		tUI = new TodoUI(tIL);
-		
+		tUI = new TodoUI(tIL);		
 	}
-
 }		
 						
 //		System.out.println("\nReading from XML");

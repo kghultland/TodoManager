@@ -46,11 +46,12 @@ public class TodoUI {
 	private JButton loadButton;
 	private JButton saveButton;
 	private JButton exitButton;
-
+	
 	private static JTextField title = new JTextField();
 	private static JTextField body = new JTextField();
 	private static DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 	private static JFormattedTextField date = new JFormattedTextField(format);
+	
 	
 	//private static JTextField search = new JTextField();
 
@@ -73,6 +74,7 @@ public class TodoUI {
 
 		frame.setLocation(400, 200);
 		frame.setSize(850, 600);
+		frame.setResizable(false);
 
 		// Fetch the window ContentPane and set its layout
 		contentPane = frame.getContentPane();
@@ -101,8 +103,8 @@ public class TodoUI {
 		listScroller.setPreferredSize(new Dimension(650, 550));
 
 		SpringLayout.Constraints listCons = layout.getConstraints(listScroller);
-		listCons.setX(Spring.constant(5));
-		listCons.setY(Spring.constant(5));
+		listCons.setX(Spring.constant(10));
+		listCons.setY(Spring.constant(10));
 		contentPane.add(listScroller);
 
 		addButton = new JButton("ADD");
@@ -110,7 +112,7 @@ public class TodoUI {
 
 		SpringLayout.Constraints addCons = layout.getConstraints(addButton);
 		addCons.setX(Spring.sum(Spring.constant(10), listCons.getConstraint(SpringLayout.EAST)));
-		addCons.setY(Spring.constant(5));
+		addCons.setY(Spring.constant(10));
 		addCons.setWidth(Spring.constant(150));
 		contentPane.add(addButton);
 		

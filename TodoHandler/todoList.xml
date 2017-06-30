@@ -67,7 +67,7 @@
   <void method="add">
    <object class="TodoItem">
     <void property="body">
-     <string>Diska hunden.  Använd mycket såpa</string>
+     <string>Diska hunden. Använd mycket såpa</string>
     </void>
     <void property="dueDateTime">
      <object class="java.util.Date">

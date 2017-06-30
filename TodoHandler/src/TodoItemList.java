@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Collections;  // sortering
 import java.util.Comparator;
 
-public class TodoItemList {
+public class TodoItemList  {
 	
 	private ArrayList<TodoItem> todoList;
 
