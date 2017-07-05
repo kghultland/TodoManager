@@ -67,7 +67,7 @@
   <void method="add">
    <object class="TodoItem">
     <void property="body">
-     <string>Diska hunden. Använd mycket såpa</string>
+     <string>Diska hunden. </string>
     </void>
     <void property="dueDateTime">
      <object class="java.util.Date">
@@ -82,7 +82,7 @@
   <void method="add">
    <object class="TodoItem">
     <void property="body">
-     <string>Städa rummet - viktigt</string>
+     <string>Städa rummet </string>
     </void>
     <void property="dueDateTime">
      <object class="java.util.Date">
@@ -121,6 +121,21 @@
     </void>
     <void property="title">
      <string>Djurhantering</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="TodoItem">
+    <void property="body">
+     <string>Betala räkningar</string>
+    </void>
+    <void property="dueDateTime">
+     <object class="java.util.Date">
+      <long>1501081200000</long>
+     </object>
+    </void>
+    <void property="title">
+     <string>Diverse</string>
     </void>
    </object>
   </void>

@@ -82,6 +82,11 @@ public class TodoItem {
 	public void setDone(boolean done) {
 		this.done = done;
 	}
+	
+	public void setToggle() {
+		this.done = !this.done;
+		
+	}
 
 	public void print() {
 		System.out.println(this.toString());		
@@ -94,10 +99,7 @@ public class TodoItem {
 		return ((done)?"\u2612 ":"\u2610 ") +  df.format(dueDateTime) +" ["+title+"] "+body;
 	}
 
-	public void setToggle() {
-		this.done = !this.done;
-		
-	}
+
 	
 
 	

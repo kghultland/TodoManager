@@ -538,6 +538,7 @@ public class TodoUI {
 				}
 				currentItem++;
 			}
+			JOptionPane.showMessageDialog(null, "Nothing found");	
 		}
 	}
 		
